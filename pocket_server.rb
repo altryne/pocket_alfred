@@ -8,7 +8,12 @@ require 'net/https'
 
 Consumer_key = '12483-e2a74088174a17f2872c4d82'
 Dirr      = File.expand_path File.dirname(__FILE__)
+begin
 Token = File.read(Dirr + "/token")  #get the token from file
+rescue
+Token = 'Error'
+end
+
 
 def start_server
   begin
@@ -123,6 +128,9 @@ case ARGV[0]
   when "post"
     # puts "doing post"
     case 
+      when Token == 'Error'
+        puts "Please login with pocket first using pocket_login in alfred"
+        exit
       when  ARGV[1].match(/chrome|safari/)
         url = applescript(ARGV[1])[0]
         title = applescript(ARGV[1])[1]
