@@ -1,1 +1,2 @@
-token
+auth.json
+*.pyc
