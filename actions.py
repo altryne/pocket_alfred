@@ -34,13 +34,13 @@ def applescript(argument):
 		return os.popen("""osascript -e 'tell app "System Events" to count processes whose name is "Safari"' """).read().rstrip()
 	if argument == "chrome":
 		obj = {}
-		obj["url"] =  os.popen(""" osascript -e 'tell application "Google Chrome" to return URL of active tab of front window' """).readline()
-		obj["title"] =  os.popen(""" osascript -e 'tell application "Google Chrome" to return title of active tab of front window' """).readline()
+		obj["url"] =  os.popen(""" osascript -e 'tell application "Google Chrome" to return URL of active tab of front window' """).readline().rstrip()
+		obj["title"] =  os.popen(""" osascript -e 'tell application "Google Chrome" to return title of active tab of front window' """).readline().rstrip()
 		return obj
 	if argument == "safari":
 		obj = {}
-		obj["url"] =  os.popen(""" osascript -e 'tell application "Safari" to return URL of front document' """).readline()
-		obj["title"] =  os.popen(""" osascript -e 'tell application "Safari" to return name of front document' """).readline()
+		obj["url"] =  os.popen(""" osascript -e 'tell application "Safari" to return URL of front document' """).readline().rstrip()
+		obj["title"] =  os.popen(""" osascript -e 'tell application "Safari" to return name of front document' """).readline().rstrip()
 		return obj
 	if argument == 'isClipboard':
 		clip = os.popen(""" osascript -e "get the clipboard" """).readline()
