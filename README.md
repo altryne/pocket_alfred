@@ -12,3 +12,10 @@ Then, use "pocket" to save urls to pocket
 * Chrome (if open)
 * Safari (if open)
 * Clipboard (if has url)
+
+
+## Copyright & License
+
+Copyright 2014 Alex Wolkov
+
+[MIT License](LICENSE-MIT)
