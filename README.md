@@ -1,6 +1,10 @@
-#Pocket for alfred
+#Pocket for alfred 
 
 This workflow uses oAuth to authenticate you with Pocket's API and **doesn't** store any passwords or keys
+
+[Download the latest build](https://drone.io/github.com/altryne/pocket_alfred/files/pocket_alfred.alfredworkflow) [![Build Status](https://drone.io/github.com/altryne/pocket_alfred/status.png)](https://drone.io/github.com/altryne/pocket_alfred/latest)
+
+#
 
 ##Usage :
 
